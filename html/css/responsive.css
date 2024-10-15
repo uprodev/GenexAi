@@ -324,10 +324,16 @@
     padding: 70px 0; }
 
   .download figure {
-    padding: 25px 25px 0; } }
+    padding: 25px 25px 0; }
+
+  .faq-banner p {
+    font-size: 20px; } }
 @media (max-width: 991px) {
   .content-width {
     width: 720px; }
+
+  .faq h2 {
+    margin-bottom: 30px; }
 
   .home-banner figure {
     width: 65%;
@@ -831,6 +837,18 @@
   .drives .item {
     border-bottom: 1px solid #f7f7f7;
     padding-bottom: 30px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  .faq .accordion-thumb p {
+    font-size: 18px; }
+
+  .faq {
+    padding: 50px 0; }
+
+  .faq-block .accordion {
+    margin-bottom: 50px; }
+
+  .faq h2 {
+    margin-bottom: 15px; } }
 
 /*# sourceMappingURL=responsive.css.map */

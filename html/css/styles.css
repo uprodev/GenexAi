@@ -1814,5 +1814,58 @@ figure .mob {
     margin-bottom: 29px; }
 
 /*-------------------------END-ABOUT-PAGE---------------------------*/
+/*-------------------------FAQ-PAGE---------------------------*/
+.faq-banner {
+  padding: 78px 0 50px;
+  color: #000; }
+  .faq-banner .breadcrumb {
+    margin-bottom: 22px; }
+    .faq-banner .breadcrumb li {
+      color: #000; }
+      .faq-banner .breadcrumb li a {
+        color: #000; }
+  .faq-banner p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%; }
+    .faq-banner p a {
+      display: inline-block;
+      position: relative; }
+      .faq-banner p a:after {
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #000;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        -webkit-transform-origin: left;
+                transform-origin: left; }
+      .faq-banner p a:hover:after {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0); }
+  .faq-banner h1 {
+    margin-bottom: 40px; }
+
+.faq-block {
+  padding: 78px 0 100px; }
+  .faq-block h2 {
+    text-align: left; }
+  .faq-block .accordion {
+    margin-bottom: 97px; }
+  .faq-block .accordion:last-child {
+    margin-bottom: 0; }
+
+.faq .is-active .accordion-thumb:after {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.faq .accordion-thumb {
+  height: auto;
+  min-height: 66px; }
+
+/*------------------------END-FAQ-PAGE---------------------------*/
 
 /*# sourceMappingURL=styles.css.map */

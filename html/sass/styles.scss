@@ -158,7 +158,7 @@ input, textarea, button{
 /*-----------------------------HOME-PAGE---------------------------*/
 header{
   position: relative;
-  z-index: 10;
+  z-index: 999;
 }
 .top-line{
   padding: 20px 0 11px;
@@ -362,7 +362,7 @@ header{
     margin-bottom: 32px;
     b, strong{
       color: $green;
-      font-weight: 400;
+      font-weight: 700;
     }
   }
   p{
@@ -1145,7 +1145,7 @@ figure{
     margin-bottom: 31px;
     b, strong{
       color: $green;
-      font-weight: 400;
+      font-weight: 700;
     }
   }
   p{
@@ -1498,6 +1498,7 @@ figure{
 /*---------------------------PRICING-PAGE---------------------------*/
 .pricing-banner{
   padding: 79px 0 97px;
+  background: #fbfaff;
   .breadcrumb{
     li{
       color: #000;
@@ -1515,7 +1516,7 @@ figure{
     margin-bottom: 128px;
     b, strong{
       color: $violet;
-      font-weight: 400;
+      font-weight: 700;
     }
   }
   .item{
@@ -2025,6 +2026,7 @@ figure{
 .faq-banner{
   padding: 78px 0 50px;
   color: #000;
+  background: #fbfaff;
   .breadcrumb{
     margin-bottom: 22px;
     li{
@@ -2061,6 +2063,10 @@ figure{
   }
   h1{
     margin-bottom: 40px;
+    b, strong{
+      font-weight: 700;
+      color: $violet;
+    }
   }
 }
 
@@ -2084,3 +2090,325 @@ figure{
   min-height: 66px;
 }
 /*------------------------END-FAQ-PAGE---------------------------*/
+/*------------------------TEAM-PAGE---------------------------*/
+.team{
+  padding: 37px 0 128px;
+  .content-width{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .title-wrap{
+    width: 400px;
+  }
+  .text-wrap{
+    width: calc(100% - 457px);
+    padding: 32px 0 0;
+  }
+  h2{
+    margin-bottom: 25px;
+  }
+  .item{
+    margin-bottom: 88px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    figure{
+      width: 142px;
+      height: 142px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+        border-radius: 100%;
+        border: 1px solid rgb(49, 18, 109);
+      }
+    }
+    .text{
+      width: calc(100% - 181px);
+      p{
+        margin-bottom: 15px;
+      }
+      .color{
+        color: rgb(125, 45, 254);
+        font-family: $font3;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-bottom: 4px;
+      }
+      h3{
+        margin-bottom: 15px;
+      }
+      .link{
+        a{
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #000;
+          display: inline-block;
+          position: relative;
+          &:after{
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #000;
+            transition: all .4s ease;
+            transform-origin: left;
+          }
+          &:hover{
+            &:after{
+              transform: scaleX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+  .item:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.research-team{
+  padding: 126px 0 128px;
+  background: $violet;
+  color: #fff;
+  .content{
+    width: 825px;
+    margin: auto;
+    max-width: 100%;
+  }
+  p{
+    color: #fff;
+    margin-bottom: 47px;
+  }
+  h2{
+    margin-bottom: 32px;
+  }
+  .btn-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 14px;
+    margin-bottom: 97px;
+  }
+  figure{
+    margin: 0 0 100px;
+    img{
+      width: 100%;
+      height: auto;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 24px;
+    }
+  }
+  .btn-wrap:last-child{
+    margin-bottom: 0;
+  }
+  .btn-white{
+    &:hover{
+      background: #000;
+    }
+  }
+}
+/*-----------------------END-TEAM-PAGE---------------------------*/
+/*-----------------------PAPER-PAGE---------------------------*/
+.download-white-paper{
+  padding: 38px 0 128px;
+  border-bottom: 1px solid rgb(49, 18, 109);
+  .content-width{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .text{
+    width: 44%;
+  }
+  h3{
+    margin-bottom: 23px;
+  }
+  p{
+    margin-bottom: 24px;
+  }
+  ul{
+    margin: -7px 0 30px;
+    li{
+      padding-left: 29px;
+      position: relative;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      font-family: $font3;
+      margin-bottom: 7px;
+      letter-spacing: 1.5px;
+      &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../img/icon-11.svg");
+      }
+    }
+  }
+  figure{
+    width: 51%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 484px;
+    border-radius: 24px;
+    background: rgb(247, 245, 255);
+    overflow: hidden;
+  }
+  .btn-wrap{
+    margin-top: 48px;
+  }
+}
+/*----------------------END-PAPER-PAGE---------------------------*/
+/*----------------------EVENTS-PAGE---------------------------*/
+.blog{
+  padding: 38px 0 128px;
+  border-bottom: 1px solid rgb(49, 18, 109);
+  h3{
+    margin-bottom: 39px;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px 24px;
+  }
+  .item{
+    width: calc(33.33% - 16px);
+    border-radius: 16px;
+    figure{
+      margin-bottom: 32px;
+      a{
+        display: block;
+        overflow: hidden;
+        height: 241px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: all .4s ease;
+          border-radius: 16px 16px 0px 0px;
+        }
+        &:hover{
+          img{
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+    .text{
+      padding: 0 25px 32px;
+      border-radius: 0px 0px 16px 16px;
+      background: #fff;
+      h3{
+        margin-bottom: 30px;
+        min-height: 96px;
+        a{
+          display: block;
+          &:hover{
+            color: $violet;
+          }
+        }
+      }
+    }
+    .top{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      grid-gap: 15px;
+      margin-bottom: 34px;
+      .label{
+        p{
+          border: 1px solid rgb(125, 45, 254);
+          border-radius: 101px;
+          height: 24px;
+          padding: 0 15px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height:22px;
+          letter-spacing: 0.5px;
+          font-family: $font3;
+          color: $violet;
+          margin: 0;
+
+        }
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          color: rgb(0, 0, 0);
+          font-family: $font3;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+        li + li{
+          padding-left: 10px;
+          margin-left: 10px;
+          position: relative;
+          &:before{
+            position: absolute;
+            top: 4px;
+            bottom: 4px;
+            width: 1px;
+            content: '';
+            background: #000;
+            left: 0;
+          }
+        }
+      }
+    }
+    .link{
+      a{
+        display: inline-block;
+        position: relative;
+        color: rgb(82, 82, 82);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        &:after{
+          position: absolute;
+          bottom: 3px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          content: '';
+          transition: all .4s ease;
+          background: rgb(82, 82, 82);
+          transform-origin: left;
+        }
+        &:hover{
+          &:after{
+            transform: scaleX(0);
+          }
+        }
+      }
+    }
+  }
+  .content{
+    margin-bottom: 130px;
+  }
+  .content:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.blog-shadow{
+  padding-top: 99px;
+  .item{
+    box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.team, .blog, .download-white-paper, .faq-block{
+  background: #fbfaff;
+}
+/*---------------------END-EVENTS-PAGE---------------------------*/

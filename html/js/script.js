@@ -59,4 +59,21 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  //fix header
+  $(".top-line").sticky({
+    topSpacing:0
+  });
+
+//scroll up/down
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+      $('header').addClass('is-down');
+    } else {
+      $('header').removeClass('is-down');
+    }
+    lastScrollTop = st;
+  });
+
 });

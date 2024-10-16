@@ -28,10 +28,23 @@
     left: -100px; }
 
   .pricing-banner .item-3 {
-    padding: 30px 20px; } }
+    padding: 30px 20px; }
+
+  .blog .item .text {
+    padding: 0 15px 25px; }
+
+  .blog .item .top ul li {
+    font-size: 14px; }
+
+  .blog .item .text h3 {
+    font-size: 28px;
+    min-height: 84px; } }
 @media (max-width: 1199px) {
   .content-width {
     width: 960px; }
+
+  .faq-banner h1:last-child {
+    margin-bottom: 0; }
 
   .btn-head {
     height: 38px;
@@ -39,8 +52,33 @@
     font-size: 14px; }
 
   .top-line .btn-wrap .btn-head {
-    width: 140px;
-    display: none; }
+    width: 140px; }
+
+  .top-line .btn-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    overflow: hidden;
+    height: 38px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    position: relative;
+    top: 3px; }
+
+  .is-down .top-line .btn-right {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
 
   .top-line .top-menu {
     display: none; }
@@ -49,7 +87,7 @@
     display: none; }
 
   .open-menu {
-    margin: 16px 0 0 30px;
+    margin: 13px 0 0 30px;
     display: block; }
     .open-menu a {
       display: -webkit-box;
@@ -327,10 +365,33 @@
     padding: 25px 25px 0; }
 
   .faq-banner p {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .team .title-wrap {
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .team .text-wrap {
+    width: 100%;
+    padding: 0; }
+
+  .team {
+    padding: 30px 0 70px; }
+
+  .research-team {
+    padding: 70px 0; }
+
+  .blog .item {
+    width: calc(50% - 12px); }
+
+  .blog .content {
+    margin-bottom: 70px; } }
 @media (max-width: 991px) {
   .content-width {
     width: 720px; }
+
+  .blog-shadow {
+    padding-top: 40px; }
 
   .faq h2 {
     margin-bottom: 30px; }
@@ -491,7 +552,21 @@
     margin-bottom: 30px; }
 
   .download .text {
-    width: 100%; } }
+    width: 100%; }
+
+  .download-white-paper figure {
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    padding: 25px 25px 0;
+    margin-bottom: 30px; }
+
+  .download-white-paper .text {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; } }
 @media (max-width: 767px) {
   .content-width {
     width: 540px; }
@@ -510,7 +585,16 @@
 
   .graph-block-2x .item {
     width: 100%;
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+
+  .download-white-paper figure {
+    height: auto; }
+
+  .faq-banner {
+    padding-top: 40px; }
+
+  .blog .item {
+    width: 100%; } }
 @media (max-width: 575px) {
   .content-width {
     width: 100%;
@@ -520,7 +604,7 @@
     width: 24px; }
 
   .open-menu {
-    margin: 16px 4px 0 30px; }
+    margin: 13px 4px 0 30px; }
 
   .open-menu a span + span {
     margin-top: 5px; }
@@ -849,6 +933,28 @@
     margin-bottom: 50px; }
 
   .faq h2 {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+
+  .faq-banner h1 {
+    font-size: 40px; }
+
+  .team .item figure {
+    width: 70px;
+    height: 70px; }
+
+  .team .item .text {
+    width: calc(100% - 100px); }
+
+  .team .item {
+    margin-bottom: 40px; }
+
+  .research-team .btn-wrap {
+    margin-bottom: 40px; }
+
+  .research-team figure img {
+    border-radius: 12px; }
+
+  .research-team figure {
+    margin-bottom: 40px; } }
 
 /*# sourceMappingURL=responsive.css.map */

@@ -46,10 +46,23 @@ $font3: "Inconsolata", monospace;
   .pricing-banner .item-3{
     padding: 30px 20px;
   }
+  .blog .item .text{
+    padding: 0 15px 25px;
+  }
+  .blog .item .top ul li{
+    font-size: 14px;
+  }
+  .blog .item .text h3{
+    font-size: 28px;
+    min-height: 84px;
+  }
 }
 @media (max-width:1199px) {
   .content-width{
     width: 960px;
+  }
+  .faq-banner h1:last-child{
+    margin-bottom: 0;
   }
   .btn-head{
     height: 38px;
@@ -58,7 +71,29 @@ $font3: "Inconsolata", monospace;
   }
   .top-line .btn-wrap .btn-head{
     width: 140px;
-    display: none;
+  }
+  .top-line .reg{
+
+  }
+  .top-line{
+    .btn-right{
+      display: flex;
+      flex-direction: column-reverse;
+      overflow: hidden;
+      height: 38px;
+      justify-content: flex-end;
+      align-items: flex-end;
+      transition: all .4s ease;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .is-down{
+    .top-line{
+      .btn-right {
+        justify-content: flex-start;
+      }
+    }
   }
   .top-line .top-menu{
     display: none;
@@ -67,7 +102,7 @@ $font3: "Inconsolata", monospace;
     display: none;
   }
   .open-menu{
-    margin:16px 0 0 30px;
+    margin:13px 0 0 30px;
     display: block;
     a{
       display: flex;
@@ -364,11 +399,34 @@ $font3: "Inconsolata", monospace;
   .faq-banner p{
     font-size: 20px;
   }
+  .team .title-wrap{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .team .text-wrap{
+    width: 100%;
+    padding: 0;
+  }
+  .team{
+    padding: 30px 0 70px;
+  }
+  .research-team{
+    padding: 70px 0;
+  }
+  .blog .item {
+    width: calc(50% - 12px);
+  }
+  .blog .content{
+    margin-bottom: 70px;
+  }
 }
 
 @media (max-width:991px) {
   .content-width{
     width: 720px;
+  }
+  .blog-shadow {
+    padding-top: 40px;
   }
   .faq h2{
     margin-bottom: 30px;
@@ -521,6 +579,16 @@ $font3: "Inconsolata", monospace;
   .download .text{
     width: 100%;
   }
+  .download-white-paper figure{
+    width: 100%;
+    order: 0;
+    padding: 25px 25px 0;
+    margin-bottom: 30px;
+  }
+  .download-white-paper .text{
+    width: 100%;
+    order: 2;
+  }
 }
 
 @media (max-width:767px) {
@@ -543,6 +611,15 @@ $font3: "Inconsolata", monospace;
     width: 100%;
     margin-bottom: 25px;
   }
+  .download-white-paper figure{
+    height: auto;
+  }
+  .faq-banner{
+    padding-top: 40px;
+  }
+  .blog .item{
+    width: 100%;
+  }
 }
 
 @media (max-width:575px) {
@@ -554,7 +631,7 @@ $font3: "Inconsolata", monospace;
     width: 24px;
   }
   .open-menu {
-    margin: 16px 4px 0 30px;
+    margin: 13px 4px 0 30px;
   }
   .open-menu a span + span {
     margin-top: 5px;
@@ -894,5 +971,27 @@ $font3: "Inconsolata", monospace;
   }
   .faq h2{
     margin-bottom: 15px;
+  }
+  .faq-banner h1{
+    font-size: 40px;
+  }
+  .team .item figure{
+    width: 70px;
+    height: 70px;
+  }
+  .team .item .text {
+    width: calc(100% - 100px);
+  }
+  .team .item{
+    margin-bottom: 40px;
+  }
+  .research-team .btn-wrap{
+    margin-bottom: 40px;
+  }
+  .research-team figure img {
+    border-radius: 12px;
+  }
+  .research-team figure{
+    margin-bottom: 40px;
   }
 }

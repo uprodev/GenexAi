@@ -76,4 +76,34 @@ jQuery(document).ready(function ($) {
     lastScrollTop = st;
   });
 
+
+  //share link
+  $(document).on('click', '.link-copy>a', function (e){
+    e.preventDefault();
+    $(this).toggleClass('is-open')
+    if($(this).hasClass('is-open')){
+      $('.menu-link').slideDown();
+    }else{
+      $('.menu-link').slideUp();
+    }
+  })
+
+  //copy in buffer
+  $(document).on('click', '.copy>a', function (e) {
+    e.preventDefault();
+    let copyText = $(this).attr('href');
+    document.addEventListener('copy', function (e) {
+      e.clipboardData.setData('text/plain', copyText);
+      e.preventDefault();
+    }, true);
+
+    document.execCommand('copy');
+    console.log('copied text : ', copyText);
+
+    $(this).closest('.link-copy').prepend("<p class='info-show'>Copy to buffer</p>");
+    setTimeout(function () {
+      $('.info-show').hide()
+    }, 2000);
+  });
+
 });

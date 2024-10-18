@@ -2370,7 +2370,9 @@ figure .mob {
 /*--------------------END-PAGE-PAGE---------------------------*/
 /*--------------------CONTACT-PAGE---------------------------*/
 .contact {
-  padding: 37px 0 127px; }
+  padding: 37px 0 127px;
+  background: #fbfaff;
+  border-bottom: 1px solid #31126d; }
   .contact .content-width {
     display: -webkit-box;
     display: -ms-flexbox;

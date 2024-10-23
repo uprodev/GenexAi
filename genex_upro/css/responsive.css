@@ -1,5 +1,9 @@
 @media (max-width: 1440px) {
-  .top-line .content-width {
+
+	.top-line .top-menu{
+		grid-gap: 45px;
+	}
+	.top-line .content-width {
     min-width: 0; } }
 @media (max-width: 1350px) {
   .content-width {
@@ -16,7 +20,8 @@
 @media (max-width: 1280px) {
   .content-width {
     width: 1100px; }
-
+.top-line .menu-wrap {
+	width: calc(100% - 250px);}
   .top-line .top-menu {
     grid-gap: 30px; }
 

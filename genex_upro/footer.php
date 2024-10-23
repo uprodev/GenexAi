@@ -120,6 +120,18 @@
 </div>
 </footer>
 
+<div id="requested" class="default-popup" style="display:none;">
+  <?= do_shortcode('[contact-form-7 id="e4ce07d" html_class="popup-main"]') ?>
+</div>
+
+<div id="download" class="default-popup" style="display:none;">
+  <?= do_shortcode('[contact-form-7 id="dec1d8f" html_class="popup-main"]') ?>
+</div>
+
+<div id="event" class="default-popup" style="display:none;">
+  <?= do_shortcode('[contact-form-7 id="8b23c37" html_class="popup-main"]') ?>
+</div>
+
 <div id="default-popup " style="display:none;">
   <div class="popup-main">
   </div>

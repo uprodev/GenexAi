@@ -2,9 +2,18 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
+    <?php 
+    $title = get_field('title_4', 'option');
+    $items = get_field('items_4', 'option');
+    ?>
+
     <?php if (is_array($items) && checkArrayForValues($items)): ?>
     <section class="client-say">
         <div class="content-width">
+
+            <?php if ($args['index'] == 0 && !is_front_page()): ?>
+                <?php get_template_part('parts/breadcrumbs') ?>
+            <?php endif ?>
 
             <?php if ($title): ?>
                 <h2><?= $title ?></h2>

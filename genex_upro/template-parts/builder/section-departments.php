@@ -2,9 +2,18 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
+    <?php 
+    $title = get_field('title_3', 'option');
+    $items = get_field('items_3', 'option');
+    ?>
+
     <?php if (is_array($items) && checkArrayForValues($items)): ?>
     <section class="faq-3x">
         <div class="content-width">
+
+            <?php if ($args['index'] == 0 && !is_front_page()): ?>
+                <?php get_template_part('parts/breadcrumbs') ?>
+            <?php endif ?>
 
             <?php if ($title): ?>
                 <div class="title-wrap">
@@ -17,10 +26,10 @@ if($args['row']):
                 <?php foreach ($items as $index => $item): ?>
 
                     <?php if ($index % 2 == 0): ?>
-                       <div class="item"> 
-                       <?php endif ?>
+                     <div class="item"> 
+                     <?php endif ?>
 
-                       <ul class="accordion">
+                     <ul class="accordion">
                         <li class="accordion-item">
 
                             <?php if ($item['title']): ?>

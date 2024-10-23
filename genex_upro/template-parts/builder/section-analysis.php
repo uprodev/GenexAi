@@ -4,6 +4,11 @@ if($args['row']):
 
     <section class="graph-block">
         <div class="content-width">
+
+            <?php if ($args['index'] == 0 && !is_front_page()): ?>
+                <?php get_template_part('parts/breadcrumbs') ?>
+            <?php endif ?>
+
             <div class="title-wrap">
 
                 <?php if ($title): ?>

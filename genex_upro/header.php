@@ -32,6 +32,9 @@
           <?php $menu = wp_get_nav_menu_items(2) ?>
 
           <?php if ($menu): ?>
+
+            <?php $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>
+
             <ul class="top-menu">
 
               <?php foreach ($menu as $item): ?>
@@ -42,7 +45,7 @@
                 <?php endforeach ?>
 
                 <?php if ($item->menu_item_parent === '0'): ?>
-                  <li>
+                  <li<?php if($actual_link == $item->url) echo ' class="current-menu-item"' ?>>
                     <a href="<?= $item->url ?>"<?php if($item->target) echo ' target="_blank"' ?> data-item="<?= $item->title ?>"><span><?= $item->title ?></span>
 
                       <?php if ($child_menu): ?>
@@ -55,7 +58,7 @@
                       <ul class="sub-menu">
 
                         <?php foreach ($child_menu as $item_2): ?>
-                          <li>
+                          <li<?php if($actual_link == $item_2->url) echo ' class="current-menu-item"' ?>>
                             <a href="<?= $item_2->url ?>"<?php if($item_2->target) echo ' target="_blank"' ?>><?= $item_2->title ?></a>
                           </li>
                         <?php endforeach ?>
@@ -82,18 +85,21 @@
               </div>
             <?php endif ?>
 
-            <?php if ($field = get_field('link_2_h', 'option')): ?>
-              <div class="reg">
-                <a href="<?= $field['url'] ?>" class="btn-head"<?php if($field['target']) echo ' target="_blank"' ?>><?= $field['title'] ?></a>
-              </div>
-            <?php endif ?>
+            <div class="btn-right">
+              
+              <?php if ($field = get_field('link_2_h', 'option')): ?>
+                <div class="reg">
+                  <a href="<?= $field['url'] ?>" class="btn-head"<?php if($field['target']) echo ' target="_blank"' ?>><?= $field['title'] ?></a>
+                </div>
+              <?php endif ?>
 
-            <div class="open-menu">
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-              </a>
+              <div class="open-menu">
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+              </div>
             </div>
           </div>
         </nav>

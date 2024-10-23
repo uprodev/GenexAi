@@ -2,24 +2,27 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
-    <section class="blockquote-block">
+    <?php if ($text): ?>
 
-        <?php if ($image || $image_mobile): ?>
-            <figure>
+        <?php 
+        switch ($background) {
+            case 'White':
+            $class = ' bg-white';
+            break;
+            
+            default:
+            $class = '';
+            break;
+        }
+        ?>
 
-                <?php if ($image): ?>
-                    <?= wp_get_attachment_image($image['ID'], 'full') ?>
-                <?php endif ?>
-
-                <?php if ($image_mobile): ?>
-                    <?= wp_get_attachment_image($image_mobile['ID'], 'full', false, array('class' => 'mob')) ?>
-                <?php endif ?>
-                
-            </figure>
-        <?php endif ?>
-        
-        <?php if ($text): ?>
+        <section class="blockquote-block pt-125<?= $class ?>">
             <div class="content-width">
+
+                <?php if ($args['index'] == 0 && !is_front_page()): ?>
+                    <?php get_template_part('parts/breadcrumbs') ?>
+                <?php endif ?>
+
                 <div class="content">
                     <blockquote>“<span><?= $text ?></span>”</blockquote>
                     <div class="user">
@@ -44,8 +47,7 @@ if($args['row']):
                     </div>
                 </div>
             </div>
-        <?php endif ?>
-        
-    </section>
+        </section>
+    <?php endif ?>
 
     <?php endif; ?>

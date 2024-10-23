@@ -2,9 +2,31 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
+    <?php 
+    $title = get_field('title_2', 'option');
+    $items = get_field('items_2', 'option');
+    ?>
+
     <?php if (is_array($items) && checkArrayForValues($items)): ?>
-    <section class="item-3x">
+
+    <?php 
+    switch ($background_color) {
+        case 'Violet':
+        $add_class = 'bg-violet';
+        break;
+        
+        default:
+        $add_class = '';
+        break;
+    }
+    ?>
+
+    <section class="item-3x<?php if($add_class) echo ' ' . $add_class ?>">
         <div class="content-width">
+
+            <?php if ($args['index'] == 0 && !is_front_page()): ?>
+                <?php get_template_part('parts/breadcrumbs') ?>
+            <?php endif ?>
 
             <?php if ($title): ?>
                 <div class="title-wrap">

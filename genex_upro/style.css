@@ -10,3 +10,8 @@ Theme Name: GenexAI
 	white-space: nowrap;
 	width: fit-content;
 }
+.top-line .btn-wrap .btn-head img{
+	position: relative;
+	top: 1px;
+	filter: invert(1);
+}
